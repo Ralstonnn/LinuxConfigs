@@ -18,6 +18,7 @@ alias npmd='npm run dev'
 # Yarn
 alias ys='yarn run start'
 alias yd='yarn run dev'
+alias ydh='yarn run dev --host'
 alias yb='yarn run build'
 alias yp='yarn run preview'
 alias ys='yarn run test'
