@@ -18,4 +18,3 @@ vim.opt.expandtab = true
 
 -- Set leader+h to clear last search
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
-

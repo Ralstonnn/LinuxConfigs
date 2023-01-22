@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "/home/ralstonnn/.local/share/nvim/site/pack/packer/start/auto-pairs",
+    url = "https://github.com/jiangmiao/auto-pairs"
+  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/home/ralstonnn/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
