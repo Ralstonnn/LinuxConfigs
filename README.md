@@ -1,4 +1,4 @@
-Copy file to ~/.config/customaliases/
+Copy aliases file to ~/.config/customaliases/
 
 Add to ~/.bashrc 
 ```
