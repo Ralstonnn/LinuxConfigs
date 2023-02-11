@@ -30,13 +30,14 @@ alias flaskrn='flask run'
 
 # Neovim
 alias nv='nvim'
+alias nvz='nvim ~/.zshrc'
 
 # Neovide
 alias nvd='neovide'
 
 # Pacman
 alias install='yay -S'
-alias remove='yay -R'
+alias remove='yay -Rns'
 alias update='yay -Syu'
 
 # MariaDB
