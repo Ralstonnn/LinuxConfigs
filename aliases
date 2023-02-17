@@ -25,6 +25,11 @@ alias yb='yarn run build'
 alias yp='yarn run preview'
 alias ys='yarn run test'
 
+# Work
+alias vzfs='nvm use 14.7.0 && cd ~/Work/vznaniya/front-student'
+alias vzf="cd ~/Work/vznaniya/front && nvm use 16.16.0"
+alias bmf="cd ~/Work/bodyMap/front-web && nvm use 18.13.0"
+
 # Flask
 alias flaskrn='flask run'
 
