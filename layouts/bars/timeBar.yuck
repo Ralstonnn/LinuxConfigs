@@ -1,0 +1,23 @@
+
+(defpoll time_pool :interval "1s"
+  :initial "initial-value"  ; optional, defaults to poll at startup
+  :run-while time-visible   ; optional, defaults to 'true'
+  `date +%H:%M`
+)
+  
+(defwidget time_w []
+  (box :class "top-bar-widget-container"
+    "${time_pool}"
+  )
+)
+
+(defwindow time
+  :monitor 0
+  :geometry (geometry :x "130px"
+                      :y "-30px"
+                      :height "30px"
+                      :anchor "top right"
+            )
+  :stacking "fg"
+  (time_w)
+)
