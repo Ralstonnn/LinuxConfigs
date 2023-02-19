@@ -2,5 +2,3 @@
 (include "./layouts/bars/workspacesBar.yuck")
 (include "./layouts/bars/batteryIndicator.yuck")
 (include "./layouts/bars/timeBar.yuck")
-
-(defvar home "/home/ralstonnn")
