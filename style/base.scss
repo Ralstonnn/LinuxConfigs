@@ -1,5 +1,21 @@
 .top-bar-widget-container {
-  padding: 0 20px;
+  padding: 5px 20px;
   border-radius: 200px;
   background-color: #3d3d3d;
+}
+
+.workspace-entry.occupied {
+  background-color: #181717;
+}
+
+.workspace-entry.current {
+  background-color: #5c5b5b;
+}
+
+.workspace-entry:first-child {
+  margin-left: 0;
+}
+
+.workspace-entry-wrapper + .workspace-entry-wrapper {
+  margin-left: 5px;
 }
