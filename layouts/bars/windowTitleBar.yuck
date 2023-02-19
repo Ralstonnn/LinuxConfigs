@@ -9,11 +9,11 @@
 (defwindow window_title_bar
   :monitor 0
   :geometry (geometry :x "0%"
-                      :y "0"
+                      :y "10px"
                       :widget "300px"
                       :height "30px"
                       :anchor "top center"
-                  )
+            )
   :stacking "fg"
   :exclusive true
   (window_w)
