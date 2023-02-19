@@ -29,3 +29,13 @@
 .img {
   margin-right: 10px;
 }
+
+.power-buttons.active {
+  border-radius: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.power-buttons__hidden-container > * {
+  margin-top: 20px;
+}

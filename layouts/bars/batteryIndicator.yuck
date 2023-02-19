@@ -21,7 +21,7 @@
 
 (defwindow battery_indicator
   :monitor 0
-  :geometry (geometry :x "90px"
+  :geometry (geometry :x "100px"
                       :y "-30px"
                       :width "70px"
                       :height "30px"

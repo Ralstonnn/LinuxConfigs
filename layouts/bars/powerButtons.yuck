@@ -3,23 +3,24 @@
 (defvar logout "./assets/powerButons/logout.png")
 
 (defvar show false)
-
+  
 (defwidget power_buttons_w []
-  (eventbox 
-    (overlay
-      (box :class "top-bar-widget-container power-buttons" :onhover "show true" :onhoverlost "show false"
-        (button
-          (image :path power :image-width 15 :image-height 15)    
-        )
-        (revealer :visible show :transition "sidedown" :duration "0.5s" :reveal show
-          (box :class "top-bar-widget-container power-buttons"
-            (button)
-              "test"
+  (eventbox :onhover "eww update show=true" :onhoverlost "eww update show=false"
+    (box :class "top-bar-widget-container power-buttons ${show ? "active" : ""}" :orientation "v" :space-evenly "false"
+      (button :valign "center" :halign "center" :onclick "shutdown now"
+        (image :path power :image-width 20 :image-height 20)    
+      )
+      (revealer :reveal show :transition "slidedown" :duration "500ms"
+        (box :orientation "v" :class "power-buttons__hidden-container"
+          (button :onclick "reboot"
+            (image :path restart :image-width 25 :image-height 25)
           )
+          ; (button :onclick "exit"
+          ;   (image :path logout :image-width 25 :image-height 25)
+          ; )
         )
-      ) 
-
-    )
+      )
+    ) 
   )
 )
 
