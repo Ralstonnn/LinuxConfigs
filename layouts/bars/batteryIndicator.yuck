@@ -1,17 +1,17 @@
-(defvar battery_charging "/home/ralstonnn/.config/eww/assets/battery/battery-with-a-bolt.png")
-(defvar battery_charged "/home/ralstonnn/.config/eww/assets/battery/battery-charged-symbol.png")
-(defvar battery_full "/home/ralstonnn/.config/eww/assets/battery/battery-with-four-empty-divisions.png")
-(defvar battery_three_quarters_charged "/home/ralstonnn/.config/eww/assets/battery/battery-status-with-three-quarters-charged.png")
-(defvar battery_half_charged "/home/ralstonnn/.config/eww/assets/battery/battery-status-with-half-power.png")
-(defvar battery_very_low "/home/ralstonnn/.config/eww/assets/battery/low-battery-status-interface-symbol.png")
+(defvar battery_charging "./assets/battery/battery-with-a-bolt.png")
+(defvar battery_charged "./assets/battery/battery-charged-symbol.png")
+(defvar battery_full "./assets/battery/battery-with-four-empty-divisions.png")
+(defvar battery_three_quarters_charged "./assets/battery/battery-status-with-three-quarters-charged.png")
+(defvar battery_half_charged "./assets/battery/battery-status-with-half-power.png")
+(defvar battery_very_low "./assets/battery/low-battery-status-interface-symbol.png")
 
 (defwidget battery []
   (box :class "top-bar-widget-container battery"
     (image :path "${EWW_BATTERY.BAT0.status == "Charging" ? battery_charging : 
                     EWW_BATTERY.BAT0.status == "Full" ? battery_charged : 
-                    EWW_BATTERY.BAT0.capacity >= 90 ? battery_full :
-                    EWW_BATTERY.BAT0.capacity >= 75 ? battery_three_quarters_charged :
-                    EWW_BATTERY.BAT0.capacity >= 50 ? battery_half_charged : battery_very_low}"
+                    EWW_BATTERY.BAT0.capacity > 75 ? battery_full :
+                    EWW_BATTERY.BAT0.capacity > 50 ? battery_three_quarters_charged :
+                    EWW_BATTERY.BAT0.capacity > 25 ? battery_half_charged : battery_very_low}"
            :image-width 20 
            :image-height 20 
            :class "img")
@@ -21,7 +21,7 @@
 
 (defwindow battery_indicator
   :monitor 0
-  :geometry (geometry :x "20px"
+  :geometry (geometry :x "90px"
                       :y "-30px"
                       :width "70px"
                       :height "30px"

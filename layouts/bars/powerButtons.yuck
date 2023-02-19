@@ -1,0 +1,35 @@
+(defvar power "./assets/powerButons/power.png")
+(defvar restart "./assets/powerButons/restart.png")
+(defvar logout "./assets/powerButons/logout.png")
+
+(defvar show false)
+
+(defwidget power_buttons_w []
+  (eventbox 
+    (overlay
+      (box :class "top-bar-widget-container power-buttons" :onhover "show true" :onhoverlost "show false"
+        (button
+          (image :path power :image-width 15 :image-height 15)    
+        )
+        (revealer :visible show :transition "sidedown" :duration "0.5s" :reveal show
+          (box :class "top-bar-widget-container power-buttons"
+            (button)
+              "test"
+          )
+        )
+      ) 
+
+    )
+  )
+)
+
+(defwindow power_buttons
+  :monitor 0
+  :geometry (geometry :x "20px"
+                      :y "-30px"
+                      :height "30px"
+                      :anchor "top right"
+            )
+  :stacking "fg"
+  (power_buttons_w)
+)
