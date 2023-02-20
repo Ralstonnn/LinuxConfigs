@@ -30,12 +30,11 @@
   margin-right: 10px;
 }
 
-.power-buttons.active {
-  border-radius: 8px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+.power-buttons {
+  transition: all 0.5s ease-in-out;
+  padding: 5 4px;
 }
 
 .power-buttons__hidden-container > * {
-  margin-top: 20px;
+  margin-top: 15px;
 }
