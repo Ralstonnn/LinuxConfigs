@@ -1,0 +1,56 @@
+#!/bin/sh
+
+# Wallpapers array
+wallpapers=(
+  "~/.config/hypr/assets/WallpapersPack/t9f6bjjt7br31.jpg"
+  "~/.config/hypr/assets/WallpapersPack/0d3bpevgy2351.png"
+  "~/.config/hypr/assets/WallpapersPack/3taojxlbqzs41.jpg"
+  "~/.config/hypr/assets/WallpapersPack/4afdsfa2sdfw.png"
+  "~/.config/hypr/assets/WallpapersPack/4fglhwi98qq31.png"
+  "~/.config/hypr/assets/WallpapersPack/9bf1j01shnk41.jpg"
+  "~/.config/hypr/assets/WallpapersPack/adq1eq7gm4941.jpg"
+  "~/.config/hypr/assets/WallpapersPack/bofj1lv9p6j31.png"
+  "~/.config/hypr/assets/WallpapersPack/c5vj9hbcx9941.jpg"
+  "~/.config/hypr/assets/WallpapersPack/dfgh24543s.jpg"
+  "~/.config/hypr/assets/WallpapersPack/dgDf79T.jpg"
+  "~/.config/hypr/assets/WallpapersPack/e7hunasn67641.png"
+  "~/.config/hypr/assets/WallpapersPack/es58zm4nonv31.png"
+  "~/.config/hypr/assets/WallpapersPack/high-up-3840×2160.jpg"
+  "~/.config/hypr/assets/WallpapersPack/i2gb4m7j7cb41.png"
+  "~/.config/hypr/assets/WallpapersPack/ia4x8geen2z31.jpg"
+  "~/.config/hypr/assets/WallpapersPack/in4somtkre841.jpg"
+  "~/.config/hypr/assets/WallpapersPack/izvyhpo.jpg"
+  "~/.config/hypr/assets/WallpapersPack/j1htusb94z931.jpg"
+  "~/.config/hypr/assets/WallpapersPack/j2eav0ajamr31.jpg"
+  "~/.config/hypr/assets/WallpapersPack/ks5hvvrva2x31.png"
+  "~/.config/hypr/assets/WallpapersPack/lfZ7FGQ.jpg"
+  "~/.config/hypr/assets/WallpapersPack/mgc76sqzgt251.jpg"
+  "~/.config/hypr/assets/WallpapersPack/oDHknxP.jpg"
+  "~/.config/hypr/assets/WallpapersPack/qkfpul1c81831.png"
+  "~/.config/hypr/assets/WallpapersPack/rrbltiehz7b31.png"
+  "~/.config/hypr/assets/WallpapersPack/sodafj43832.jpg"
+  "~/.config/hypr/assets/WallpapersPack/t9np10qvti931.png"
+  "~/.config/hypr/assets/WallpapersPack/w9d4bqr0ubl31.jpg"
+  "~/.config/hypr/assets/WallpapersPack/wallpaperflare.com_wallpaper.jpg"
+  "~/.config/hypr/assets/WallpapersPack/wallpaperflare.com_wallpaper6.jpg"
+  "~/.config/hypr/assets/WallpapersPack/wallpaperflare.com_wallpaper4.jpg"
+  "~/.config/hypr/assets/WallpapersPack/wallpaperflare.com_wallpaper5.jpg"
+  "~/.config/hypr/assets/WallpapersPack/wallpaperflare.com_wallpaper12.jpg"
+)
+
+sleep 2
+
+#############################################################
+# 1.Creates random number in range of 0,arrLength 
+# 2.Changes wallpaper in chosen period
+#############################################################
+while true 
+do 
+  randNum=$[ $RANDOM % ${#wallpapers[@]} ]
+
+  hyprctl hyprpaper unload all
+  hyprctl hyprpaper preload ${wallpapers[randNum]}
+  hyprctl hyprpaper wallpaper eDP-1,${wallpapers[randNum]}
+  # Sleep takes seconds
+  sleep $(( 60 * 20 ))
+done
