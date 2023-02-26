@@ -1,29 +1,18 @@
 .top-bar-widget-container {
-  padding: 5px 20px;
-  border-radius: 200px;
+  padding: 5px 10px;
+  border-radius: 10px;
   background-color: #585858;
 }
 
 .top-bar-widget-container.workspaces {
-  padding: 10px;
-  padding-right: 20px;
+  padding: 0;
 }
-
 .workspace-entry-wrapper {
-  margin-left: 10px;
+  border-radius: inherit;
+  padding: 0 10px;
 }
-
-.workspace-entry {
-  border-radius: 50%;
-  border: 1px solid rgb(110, 110, 110);
-}
-
-.workspace-entry.occupied {
-  border-color: rgb(255, 115, 0);
-}
-
-.workspace-entry.current {
-  background-color: rgb(0, 255, 0);
+.workspace-entry-wrapper.current {
+  background-color: rgb(46, 136, 131);
 }
 
 .img {

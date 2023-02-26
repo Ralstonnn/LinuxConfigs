@@ -4,11 +4,9 @@
   (eventbox :onscroll "bash ~/.config/eww/scripts/change-active-workspace {} ${current_workspace}" :class "workspaces-widget"
     (box :space-evenly false :class "top-bar-widget-container workspaces"
       (for workspace in workspaces
-        (box :class "workspace-entry-wrapper" :width 20
+        (box :class "workspace-entry-wrapper ${workspace.id == current_workspace ? "current" : ""}" 
           (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"  
-            (box :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}" 
-              ; (label :text "${workspace.id}")
-            )
+            (label :text "${workspace.id}")
           )
         )
       )
