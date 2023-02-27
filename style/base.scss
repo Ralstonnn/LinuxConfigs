@@ -11,12 +11,14 @@
   border-radius: inherit;
   padding: 0 10px;
 }
-.workspace-entry-wrapper.current {
-  background-color: rgb(46, 136, 131);
+.workspace-entry-wrapper.occupied label {
+  color: #89dceb;
 }
-
-.img {
-  margin-right: 10px;
+.workspace-entry-wrapper.current label {
+  color: white;
+}
+.workspace-entry-wrapper.current {
+  background-color: #74c7ec;
 }
 
 .power-buttons {
