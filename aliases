@@ -10,6 +10,7 @@ alias convertdtr='python3 $HOME/.config/zsh-config/Programs/DTRConverter/Currenc
 
 # Git
 alias gitdcm='git add -A && git commit -m "update" && git push'
+alias dotfiles='git --git-dir=$HOME/.dotFiles --work-tree=$HOME/'
 
 # NPM
 alias npms='npm start'
