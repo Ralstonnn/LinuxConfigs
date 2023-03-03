@@ -9,6 +9,10 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
+  #- ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.yml
+  #- ~/.config/alacritty/themes/catppuccin/catppuccin-macchiato.yml
+  #- ~/.config/alacritty/themes/catppuccin/catppuccin-frape.yml
+  #- ~/.config/alacritty/themes/catppuccin/catppuccin-latte.yml
   #- ~/.config/alacritty/themes/challenger-deep.yml
   - ~/.config/alacritty/themes/dracula.yml
   #- ~/.config/alacritty/themes/my_purple_theme.yml
